@@ -1,4 +1,9 @@
 import Link from "next/link";
+
+export const metadata = {
+    title: "Tienda",
+    description: "Seccion de la tienda",
+}
 export default function TiendaLayout({ children }) {
   return (
     <>
