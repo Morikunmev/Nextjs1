@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import Posts from "../page";
+import Posts from "@/components/Posts";
 
 async function loadPost(id) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
