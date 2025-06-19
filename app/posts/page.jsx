@@ -4,7 +4,7 @@ async function loadPosts() {
   const data = await res.json();
   console.log(data);
 
-  // await new Promise((resolve) => setTimeout(resolve, 4000)); // Simula un retraso de 2 segundos
+  await new Promise((resolve) => setTimeout(resolve, 3000)); // Simula un retraso de 2 segundos
   return data; // Agrega esta línea
 }
 async function PostPages() {
