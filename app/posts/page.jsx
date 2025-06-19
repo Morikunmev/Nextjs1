@@ -7,7 +7,7 @@ async function loadPosts() {
   await new Promise((resolve) => setTimeout(resolve, 3000)); // Simula un retraso de 2 segundos
   return data; // Agrega esta línea
 }
-async function PostPages() {
+async function Posts() {
   const posts = await loadPosts();
   return (
     <div>
@@ -17,4 +17,4 @@ async function PostPages() {
     </div>
   );
 }
-export default PostPages;
+export default Posts;
