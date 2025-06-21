@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import Posts from "@/app/posts/page";
+import Posts from "@/src/app/posts/page";
 
 async function loadPost(id) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
@@ -20,22 +20,20 @@ async function Page({ params }) {
         <h2 className="text-xl font-semibold text-gray-700 mb-4">
           {post.title}
         </h2>
-        <p className="text-gray-600 leading-relaxed">
-          {post.body}
-        </p>
+        <p className="text-gray-600 leading-relaxed">{post.body}</p>
       </div>
-      
+
       <hr className="border-gray-200" />
-      
+
       <div>
         <h3 className="text-lg font-semibold text-gray-800 mb-4">
           Otras publicaciones
         </h3>
-        <Suspense fallback={
-          <div className="text-center text-gray-500 py-8">
-            Cargando...
-          </div>
-        }>
+        <Suspense
+          fallback={
+            <div className="text-center text-gray-500 py-8">Cargando...</div>
+          }
+        >
           <Posts />
         </Suspense>
       </div>

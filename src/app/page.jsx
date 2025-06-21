@@ -1,4 +1,4 @@
-import Users from "@/components/Users";
+import Users from "../components/Users";
 
 export const metadata = {
   title: "Mi tienda con Next.js - HomePage",

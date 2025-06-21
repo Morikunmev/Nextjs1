@@ -1,6 +1,9 @@
 "use client";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 function PostCard({ post }) {
+  const params = useParams();
+  console.log("params", params);
   return (
     <div>
       <Link href={`/posts/${post.id}`}>
