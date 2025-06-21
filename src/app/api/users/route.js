@@ -9,7 +9,9 @@ export async function GET() {
   const data = await res.json();
   return NextResponse.json(data);
 }
-export function POST(request) {
+export async function POST(request) {
+  const { nombre, apellido } = await request.json();
+  console.log(nombre, apellido);
   return NextResponse.json({
     message: "creando datos",
   });
